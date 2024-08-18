@@ -1,0 +1,41 @@
+                   
+                   
+┌─────────────────┐
+│ 4 Code Findings │
+└─────────────────┘
+                                 
+    code_analysis/check_java.java
+   ❯❯❱ java.spring.security.injection.tainted-sql-string.tainted-sql-string
+          User data flows into this manually-constructed SQL string. User data can be safely inserted into SQL
+          strings using prepared statements or an object-relational mapper (ORM). Manually-constructed SQL    
+          strings is a possible indicator of SQL injection, which could let an attacker steal or manipulate   
+          data from the database. Instead, use prepared statements (`connection.PreparedStatement`) or a safe 
+          library.                                                                                            
+                                                                                                              
+           45┆ "select userid from sql_challenge_users where userid = '" + username_reg + "'";
+   
+   ❯❯❱ java.lang.security.audit.formatted-sql-string-deepsemgrep.formatted-sql-string-deepsemgrep
+          Untrusted input might be used to build a database query, which can lead to a SQL injection          
+          vulnerability. An attacker can execute malicious SQL statements and gain unauthorized access to     
+          sensitive data, modify, delete data, or execute arbitrary system commands. To prevent this          
+          vulnerability, use prepared statements that do not concatenate user-controllable strings and use    
+          parameterized queries where SQL commands and user data are strictly separated. Also, consider using 
+          an object-relational (ORM) framework to operate with safer abstractions. To build SQL queries safely
+          in Java, it is possible to adopt prepared statements by using the `java.sql.PreparedStatement` class
+          with bind variables.                                                                                
+                                                                                                              
+           47┆ ResultSet resultSet = statement.executeQuery(checkUserQuery);
+   
+   ❯❯❱ java.lang.security.audit.formatted-sql-string.formatted-sql-string
+          Detected a formatted string in a SQL statement. This could lead to SQL injection if variables in the
+          SQL statement are not properly sanitized. Use a prepared statements (java.sql.PreparedStatement)    
+          instead. You can obtain a PreparedStatement using 'connection.prepareStatement'.                    
+                                                                                                              
+           47┆ ResultSet resultSet = statement.executeQuery(checkUserQuery);
+   
+    ❯❱ java.lang.security.audit.sqli.jdbc-sqli.jdbc-sqli
+          Detected a formatted string in a SQL statement. This could lead to SQL injection if variables in the
+          SQL statement are not properly sanitized. Use a prepared statements (java.sql.PreparedStatement)    
+          instead. You can obtain a PreparedStatement using 'connection.prepareStatement'.                    
+                                                                                                              
+           47┆ ResultSet resultSet = statement.executeQuery(checkUserQuery);

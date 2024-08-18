@@ -1,0 +1,14 @@
+2024-07-16 14:27:12,mactest,Java Source Code,default rules
+2024-07-16 15:54:24,check_java,Java Source Code,default rules
+2024-08-18 07:45:26,testAPK,app-stage-release2.apk,default rules
+2024-08-18 07:47:23,javatest,Java Source Code,default rules
+2024-08-18 07:55:10,apk22,app-stage-release2.apk,default rules
+2024-08-18 07:56:01,apk22,app-stage-release2.apk,default rules
+2024-08-18 07:58:06,diva,DivaApplication.apk,default rules
+2024-08-18 08:00:24,divaxmltest,Android Manifest,default rules
+2024-08-18 08:09:00,divat2,DivaApplication.apk,default rules
+2024-08-18 08:18:57,divadiva,DivaApplication.apk,default rules
+2024-08-18 08:43:56,diva3times,DivaApplication.apk,default rules
+2024-08-18 08:45:02,divadivadiva3,DivaApplication.apk,default rules
+2024-08-18 19:04:14,testttttttt,DivaApplication.apk,default rules
+2024-08-18 19:08:20,lkjhgfdfgh,DivaApplication.apk,default rules
